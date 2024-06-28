@@ -1,5 +1,10 @@
 const { Schema, model, Types } = require("mongoose");
 
+const dateFormat = (timestamp) => {
+  const date = new Date(timestamp);
+  return date.toLocaleString();
+};
+
 const reactionSchema = new Schema(
   {
     reactionId: {
